@@ -1,1 +1,1 @@
-# Product-Graphs
+# Product Graph Learning and Clustering
