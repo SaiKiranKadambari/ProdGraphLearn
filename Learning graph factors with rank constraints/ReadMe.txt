@@ -21,7 +21,7 @@ Use the following codes for generating the results.
 4. NoiseFree.m is for obtaining the graph factors Lp and Lq from the noise-free Ln.
  We also report the clustering accuracy of the obtained graph factors.
 
-5. In this code, we will test the clustering performance of the graph data's navie clustering approaches.
+5. NavieMethod.m- In this code, we will test the clustering performance of the graph data's navie clustering approaches.
  We evaluate the clustering performance on the k-means and spectral clustering algorithms.
  For the k-means clustering algorithm, we refer to
  S. Lloyd, “Least squares quantization in PCM,” IEEE transactions on information theory, vol. 28, no. 2, pp. 129–137, 1982.
