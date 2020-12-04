@@ -1,5 +1,7 @@
 This folder has the files and data required for Learning graph factors with rank constraints 
 
+To obtain the Figure 3 of the paper please e  in the 
+
 Use the following codes for generating the results 
 
 
