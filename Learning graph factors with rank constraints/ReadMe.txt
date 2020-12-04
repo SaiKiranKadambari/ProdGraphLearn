@@ -8,7 +8,7 @@ Use the following codes for generating the results.
 2. PGL_method.m is for obtained the factor graphs without rank constraints.
 
 2. BigLASSO.m is for obtaining the graph learning performance using the method
- A. Kalaitzis, J. Lafferty, N. D. Lawrence, and S. Zhou, “The bigraphicallasso,” inProc.  of the  30th  Int.  Conf.  on  Machine  Learning,  vol.  28, no. 3, Atlanta, Georgia,    USA, June 2013.
+ A. Kalaitzis, J. Lafferty, N. D. Lawrence, and S. Zhou, “The bigraphicallasso,” in Proc.  of the 30th  Int.  Conf.  on  Machine  Learning,  vol.  28, no. 3, Atlanta, Georgia,    USA, June 2013.
 
 Since the precision matrix estimates from BiGLasso are not valid Laplacian matrices, we project them onto the set of all the valid graph Laplacian matrices (ProjectedBiGLasso).
 
