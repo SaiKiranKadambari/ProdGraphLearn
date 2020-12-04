@@ -17,11 +17,12 @@ Use the following codes for generating the results.
 
 3. DongsMethod.m is the code is for obtaining the graph learning performance using the method:
  X.Dong,  D.Thanou,  M.Rabbat,  and  P.Frossard, “Learning graphs from data: A signal representation perspective,” IEEE Signal Process.Mag., vol. 36, no. 3, pp. 44–63, May 2019.
+ Here, we obtain the product graph Ln with N nodes. To get the graph factors Lp and Lq with rank constraints, we factorize Ln as Lp and Lq using the water-filling based KronSum Factorization solver with spectral constraints (waterfill_RKF.m). 
 
 4. NoiseFree.m is for obtaining the graph factors Lp and Lq from the noise-free Ln.
  We also report the clustering accuracy of the obtained graph factors.
 
-5. NavieMethod.m- In this code, we will test the clustering performance of the graph data's navie clustering approaches.
+5. NavieMethod.m- In this code, we will test the clustering performance of the graph data’s navie clustering approaches.
  We evaluate the clustering performance on the k-means and spectral clustering algorithms.
  For the k-means clustering algorithm, we refer to
  S. Lloyd, “Least squares quantization in PCM,” IEEE transactions on information theory, vol. 28, no. 2, pp. 129–137, 1982.
