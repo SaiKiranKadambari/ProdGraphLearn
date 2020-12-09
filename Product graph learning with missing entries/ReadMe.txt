@@ -5,4 +5,4 @@ the year 2018. The data is available at https://app.cpcbccr.com/
 
 The data is stored in the usable format in the file AQI_Data_WithCoords.mat.
 
-The file AQI_Data.m gives figure 5 of the paper.
+The file AQI_Data.m is for product graph learning with missing entries and gives figure 5 of the paper.
