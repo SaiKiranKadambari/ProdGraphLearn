@@ -9,4 +9,4 @@ Learning graph factors with rank constraints - Learns a K-component Cartesian pr
 
 Multi-view object clustering (COIL-20 dataset) - Contains the data and files used to demonstrate we demonstrate product graph clustering using COIL-20 image dataset. 
 
-Joint data imputation and product graph learning - We demonstrate the performce of the product graph learning framework for imputing missing PM2:5 measurements in the air quality data collected across the 30 air quality monitoring stations located all over India for the year 2018.
+Joint data imputation and product graph learning - We demonstrate the performce of the product graph learning framework for imputing missing PM2.5 measurements in the air quality data collected across the 30 air quality monitoring stations located all over India for the year 2018.
