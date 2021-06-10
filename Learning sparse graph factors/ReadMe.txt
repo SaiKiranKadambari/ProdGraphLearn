@@ -24,3 +24,8 @@ We then project them on to valid Laplacian matrice(LapFactorize.m is the pseudo-
 %%%%%%%%%%%%% Figures %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 In the folder Fig2 Data, we have the Matlab files required for generating the Fig. 2 of the paper. 
+
+
+%%%%%%%%%%%%% HyperParameterAnalysis %%%%%%%%%%%%%%%%%
+
+In the folder HyperParameterAnalysis_PGL we give the hyperparameter analysis of the PGL algorithm
