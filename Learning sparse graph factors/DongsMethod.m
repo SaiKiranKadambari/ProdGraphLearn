@@ -6,13 +6,8 @@ clc;clear all;close all
 % should use the KronPGL (Unconstrained KronSum Factorization) to obtain
 % the factor graphs
 
-
-% Note.Add all the folders and subfolders of the unlocbox to the matlab
-% path.
-
-
 addpath ./misc/
-
+% addpath ./KronFactor/
 
 load('GraphsComm.mat')
 clear param Wp Wq
@@ -24,9 +19,9 @@ Lq = (Q/trace(Lq))*Lq;
 L = KronSum(Lp, Lq);
 % L = L/trace(L)*size(L,1); 
 
-NumSignals  = [5000]; % Maximum number of samples
-% NumSignals = [10 50 100 250 500 1000 2000 5000];
-nIter = 1; % number of times we want to repeat the process
+NumSignals  = [50000]; % Maximum number of samples
+NumSignals = [10 50 100 250 500 1000 2000 5000 10000 15000 20000];
+nIter = 20; % number of times we want to repeat the process
 
 param.tp = trace(Lp); % Params for KronSumFactorization
 param.tq = trace(Lq);
@@ -36,6 +31,14 @@ N = NumSignals(i); % Number of graph signals
 for j = 1:nIter
 
 [X, ~, ~] = DataGen(Lp, Lq, N);
+% % Generate the graph data
+% s = 150;
+% [V,D] = eig(full(L));
+% sigma = pinv(D);
+% mu = zeros(1,size(L,1));
+% gftcoeff = mvnrnd(mu,sigma, N);
+% X = V(:,1:s)*gftcoeff(:,1:s)';
+% clear V D sigma mu gftcoeff s
 
 Z = gsp_distanz(X').^2;
 Z = Z/N;
@@ -77,3 +80,4 @@ legend('Lp','Lq','L')
 
 
 rmpath ./misc/
+% rmpath ./KronFactor/

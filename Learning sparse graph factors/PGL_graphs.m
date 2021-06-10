@@ -1,21 +1,20 @@
 clc;clear all;close all
-
 % In this coode, we will test the performance of the graph Learning methods
 % in terms of Fmeasure by varing the number of available samples.
 
 addpath ./misc/
-load('GraphsComm.mat') % We use this graph to get the results in the paper
+load('GraphsComm.mat')
 clear param Wp Wq
-% figure(1);clf;subplot(211);plot(Gp);title('Gp True')
-% subplot(212);plot(Gq);title('Gq True')
+figure(1);clf;subplot(211);plot(Gp);title('Gp True')
+subplot(212);plot(Gq);title('Gq True')
 
 Lp = (P/trace(Lp))*Lp; % Trace normalization
 Lq = (Q/trace(Lq))*Lq;
 L = KronSum(Lp, Lq);
 
 NumSignals  = [5000]; % Maximum number of samples
-% NumSignals = [10 50 100 250 500 1000 2000 5000];
-nIter = 1; % number of times we want to repeat the process
+NumSignals = [10 50 100 250 500 1000 2000 5000 10000 15000 20000];
+nIter = 5; % number of times we want to repeat the process
 
 max_iter = 1; % max_iter for the proposed algorithm
 
@@ -35,13 +34,11 @@ Sq = Sq/N;
 
 L_r = KronSum(Lp_i, Lq_i);
 
-% f-measures
-[~, ~, f_p(i,j), ~, ~] = graph_learning_perf_eval(Lp,Lp_i); 
+[~, ~, f_p(i,j), ~, ~] = graph_learning_perf_eval(Lp,Lp_i);
 [~, ~, f_q(i,j), ~, ~] = graph_learning_perf_eval(Lq,Lq_i);
 [~, ~, f(i,j), ~, ~] = graph_learning_perf_eval(L,L_r);
 end
 end
-
 Wp_r = diag(diag(Lp_i)) - Lp_i;
 Wq_r = diag(diag(Lq_i)) - Lq_i;
 Gp_r = graph(Wp_r);
@@ -87,7 +84,7 @@ dq = [q; zeros(q,1)];
 C = blkdiag(Cp, Cq);
 d = [dp; dq];
 % Solver 
-[l_wf,  err] = PGL(P0, q0, C, d, 1e-6, 0.0051);
+[l_wf,  err] = PGL_solver(P0, q0, C, d, 1e-6, 0.0051);
 % Sanity check
 % figure(100);clf;loglog(err);title('Waterfilling error')
 
@@ -101,7 +98,7 @@ end
 
 
 
-function [l err] = PGL(P, q, C, d, tol, rho)
+function [l err] = PGL_solver(P, q, C, d, tol, rho)
 
 p = diag(P);
 %mu = rand(size(C,1),1);

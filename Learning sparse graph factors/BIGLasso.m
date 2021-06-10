@@ -5,7 +5,6 @@ clc;clear all;close all
 
 
 addpath ./misc/
-addpath ./BigLASSO/
 load('GraphsComm.mat')
 clear param Wp Wq
 L = KronSum(Lp, Lq);
@@ -19,15 +18,15 @@ subplot(212);plot(Gq);title('Gq True')
 
 %%
 
-% NumSignals = [10 50 100 250 500 1000 2000 5000];
-NumSignals = [50000];
-nIter = 1;  % Number of iterations for one data sample
+NumSignals = [10 50 100 250 500 1000 2000 5000 10000 15000 20000 ];
+% NumSignals = [50000];
+nIter = 10;  % Number of iterations for one data sample
 
 Psi0{1} = Lp; % Defining the inputs as defined in the BIGLasso code
 Psi0{2} = Lq;
 
 
-lambda = [0.015 0.02];
+lambda = [0.01 0.01];
 a = 60;
 tol = 1e-10;
 maxiter = 200;
@@ -93,7 +92,4 @@ figure(3);plot(smooth(sum(Projf,2)/nIter),'LineWidth',1.5); hold on
 figure(1);legend('B','B+P')
 figure(2);legend('B', 'B+P')
 figure(3);legend('B', 'B+P')
-
 rmpath ./misc/
-rmpath ./BigLASSO/
-
