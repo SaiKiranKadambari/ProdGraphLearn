@@ -12,4 +12,4 @@ Multi-view object clustering (COIL-20 dataset): This contains the data and files
 
 Joint data imputation and product graph learning: We demonstrate the performance of the product graph learning framework for imputing missing PM2.5 measurements in the air quality data collected across the 30 air quality monitoring stations located all over India for the year 2018.
 
-TimeAnalysis: We compare per iteration runtime of the proposed method with the state-of-the-art graph learning methods. 
+TimeAnalysis: We compare per iteration runtime of the proposed method with the state-of-the-art graph learning methods.
