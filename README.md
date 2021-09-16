@@ -6,7 +6,7 @@ We propose an efficient graph learning algorithm to learn the factors of the pro
 
 Learning sparse graph factors: Learns a sparse Cartesian product graph with N nodes by estimating its graph factors.
 
-Learning graph factors with rank constraints: Learns a K-component Cartesian product graph with N-nodes by estimating it as a Cartesiian product its graph factors with Kp and Kq components with K = KpKq.
+Learning graph factors with rank constraints: Learns a K-component Cartesian product graph with N-nodes by estimating it as a Cartesian product its graph factors with Kp and Kq components with K = KpKq.
 
 Multi-view object clustering (COIL-20 dataset): This contains the data and files used to demonstrate product graph clustering on the COIL-20 image dataset. 
 
